@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimized Treatment Schedule</title>
+</head>
+<body>
+    <h1>Optimized Treatment Schedule</h1>
+    <p>Treatment days in final cycle: {{ data.treatment_days }}</p>
+    <p>Break days in final cycle: {{ data.break_days }}</p>
+    <form action="/optimize_schedule" method="post">
+        <input type="submit" value="Start Treatment">
+    </form>
+</body>
+</html>

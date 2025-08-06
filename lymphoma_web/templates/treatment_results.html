@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Treatment Results</title>
+</head>
+<body>
+    <h1>Treatment Results</h1>
+
+    <h2>Initial Schedule:</h2>
+    <p>Number of cycles: {{ data.num_cycles }}</p>
+    <p>Weeks per cycle: {{ data.weeks_per_cycle }}</p>
+    <p>Break weeks between cycles: {{ data.break_weeks }}</p>
+    <p>Treatment days in cycle 1: {{ data.treatment_days }}</p>
+    <p>Break days in cycle 1: {{ data.break_days }}</p>
+
+    <h2>Optimized Schedule:</h2>
+    <p>Treatment days in final cycle: {{ data.treatment_days }}</p>
+    <p>Break days in final cycle: {{ data.break_days }}</p>
+
+    <form method="POST">
+        <h3>Enter the following details for the current cycle:</h3>
+        <label for="tolerance">Enter level of tolerance to treatment (0-100%):</label>
+        <input type="number" name="tolerance" id="tolerance" required><br>
+
+        <label for="recovery">Enter ability to recover from side effects (0-100%):</label>
+        <input type="number" name="recovery" id="recovery" required><br>
+
+        <label for="wbc">Enter WBC count (in thousands per cubic millimeter):</label>
+        <input type="number" name="wbc" id="wbc" required><br>
+
+        <label for="rbc">Enter RBC count (in thousands per cubic millimeter):</label>
+        <input type="number" name="rbc" id="rbc" required><br>
+
+        <label for="platelet_count">Enter Platelet count (in thousands per cubic millimeter):</label>
+        <input type="number" name="platelet_count" id="platelet_count" required><br>
+
+        <label for="tumor_change">Enter tumor change (shrinkage: negative, growth: positive) in percentage:</label>
+        <input type="number" name="tumor_change" id="tumor_change" required><br>
+
+        <label for="heart_health">Enter the percentage of heart health (0-100):</label>
+        <input type="number" name="heart_health" id="heart_health" required><br>
+
+        <label for="lung_health">Enter the percentage of lung health (0-100):</label>
+        <input type="number" name="lung_health" id="lung_health" required><br>
+
+        <button type="submit">Submit Cycle Data</button>
+    </form>
+</body>
+</html>

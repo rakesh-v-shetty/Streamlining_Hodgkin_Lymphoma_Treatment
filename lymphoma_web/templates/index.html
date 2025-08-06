@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hodgkin's Lymphoma Treatment Simulation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Hodgkin's Lymphoma Treatment Simulation</h1>
+        </div>
+        <form method="post" action="/">
+            <div class="form-group">
+                <label for="stage">Stage of Hodgkin's Lymphoma (1-4):</label>
+                <input type="number" class="form-control" id="stage" name="stage" min="1" max="4" required>
+            </div>
+            <div class="form-group">
+                <label for="heart_health">Heart Health (%):</label>
+                <input type="number" class="form-control" id="heart_health" name="heart_health" min="0" max="100" required>
+            </div>
+            <div class="form-group">
+                <label for="lung_health">Lung Health (%):</label>
+                <input type="number" class="form-control" id="lung_health" name="lung_health" min="0" max="100" required>
+            </div>
+            <div class="form-group">
+                <label for="bulky_tumors">Bulky Tumors (1 for Yes, 0 for No):</label>
+                <input type="number" class="form-control" id="bulky_tumors" name="bulky_tumors" min="0" max="1" required>
+            </div>
+            <button type="submit" class="btn btn-custom">Submit</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

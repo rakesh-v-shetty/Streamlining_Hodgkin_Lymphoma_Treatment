@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initial Treatment Schedule</title>
+</head>
+<body>
+    <h1>Initial Treatment Schedule</h1>
+    <p>Treatment Method: {{ treatment_method }}</p>
+    <p>Number of cycles: {{ data.num_cycles }}</p>
+    <p>Weeks per cycle: {{ data.weeks_per_cycle }}</p>
+    <p>Break weeks between cycles: {{ data.break_weeks }}</p>
+    <p>Treatment days in cycle 1: {{ data.treatment_days }}</p>
+    <p>Break days in cycle 1: {{ data.break_days }}</p>
+    <form action="/show_initial_schedule" method="post">
+        <input type="submit" value="Optimize Schedule">
+    </form>
+</body>
+</html>

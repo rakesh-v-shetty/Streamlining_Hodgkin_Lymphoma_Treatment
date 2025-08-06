@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Cycle</title>
+</head>
+<body>
+    <h1>Cycle {{ patient_data.current_cycle }} of {{ patient_data.num_cycles }}</h1>
+    
+    <form action="/manage-cycle" method="post">
+        <label for="tolerance">Level of tolerance to treatment (0-100%):</label><br>
+        <input type="number" id="tolerance" name="tolerance" required><br><br>
+
+        <label for="recovery">Ability to recover from side effects (0-100%):</label><br>
+        <input type="number" id="recovery" name="recovery" required><br><br>
+
+        <!-- Add more fields as needed -->
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
